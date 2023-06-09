@@ -5,9 +5,9 @@ const app = express();
 app.listen(5000, function(){
   console.log("서버 정상 열림 5000")
 })
-app.use(express.static(path.join(__dirname, 'waterworks-5/dist')));
+app.use(express.static(path.join(__dirname, 'waterworks/dist')));
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'waterworsk-5/dist/index.html'))
+  res.sendFile(path.join(__dirname, 'waterworsk/dist/index.html'))
 })
 
 // app.get('/', function(요청, 응답){
@@ -40,7 +40,7 @@ app.get('/', function(req, res){
 //  nodemon server.js 입력 - nodemon 서버 여는 방법
 
 app.get('*', function(req, res){
-  res.sendFile(path.join(__dirname, 'waterworsk-5/dist/index.html'))
+  res.sendFile(path.join(__dirname, 'waterworsk/dist/index.html'))
 })
 
 module.exports = app;
